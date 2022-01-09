@@ -35,7 +35,11 @@ namespace Form_homework
         private void btn_nprintNameTenTimes_Click(object sender, EventArgs e)
         {
             var name = "Tadas";
-            richTextBox_displayNameTenTimes.Text =name;
+            for (int i = 0; i < 10; i++)
+            {
+                richTextBox_displayNameTenTimes.AppendText($"\r\n{i + 1} {name}");
+            }
+            
         }
 
         private void richTextBox_displayNameTenTimes_TextChanged(object sender, EventArgs e)
@@ -50,12 +54,7 @@ namespace Form_homework
 
         private void btn_oddOrEven_Click(object sender, EventArgs e)
         {
-            //int n;
-            //bool isNumeric = int.TryParse(richTextBox_oddOrEvenNumber.Text, out n);
-            //while (!isNumeric)
-            //{ 
-            //    richTextBox_oddOrEvenNumber.Text = "Please enter a number";
-            //}
+           
             
             
             if (Convert.ToInt32(richTextBox_oddOrEvenNumber.Text) % 2 == 0)
@@ -94,7 +93,7 @@ namespace Form_homework
             var median = (Convert.ToDouble(((TextBox)txb_firstSemester).Text) + Convert.ToDouble(((TextBox)tbx_secondSemester).Text) + Convert.ToDouble(((TextBox)tbx_thirdSemester).Text)) / 3;
             tbx_semesterMedian.Text = median.ToString();
         }
-
+        //---------------------------------------------------------------------
         private void tbx_celcius_TextChanged(object sender, EventArgs e)
         {
             var temp_celcius = Convert.ToInt32(tbx_celcius.Text);
@@ -107,6 +106,27 @@ namespace Form_homework
         }
 
         private void tbx_fahrenheit_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+        //----------------------------------------------------------
+        private void tbx_weight_TextChanged(object sender, EventArgs e)
+        {
+            var kgs = Convert.ToInt32(tbx_weight.Text);
+        }
+
+        private void tbx_height_TextChanged(object sender, EventArgs e)
+        {
+            var meters = Convert.ToDouble(tbx_height.Text)/ 100;
+        }
+
+        private void btn_kmi_Click(object sender, EventArgs e)
+        {
+            var kmi = (Convert.ToInt32(tbx_weight.Text) / (Convert.ToDouble(tbx_height.Text) / 100) * (Convert.ToDouble(tbx_height.Text) / 100));
+            rch_kmi.Text = kmi.ToString();
+        }
+        
+        private void rch_kmi_TextChanged(object sender, EventArgs e)
         {
             
         }

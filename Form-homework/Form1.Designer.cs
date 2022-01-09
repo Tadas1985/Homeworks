@@ -47,6 +47,12 @@
             this.btn_celciusToFarenheit = new System.Windows.Forms.Button();
             this.tbx_celcius = new System.Windows.Forms.TextBox();
             this.tbx_fahrenheit = new System.Windows.Forms.TextBox();
+            this.lbl_w = new System.Windows.Forms.Label();
+            this.lbl_h = new System.Windows.Forms.Label();
+            this.btn_kmi = new System.Windows.Forms.Button();
+            this.rch_kmi = new System.Windows.Forms.RichTextBox();
+            this.tbx_weight = new System.Windows.Forms.TextBox();
+            this.tbx_height = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btn_nameAndDate
@@ -99,7 +105,7 @@
             // 
             // richTextBox_oddOrEvenNumber
             // 
-            this.richTextBox_oddOrEvenNumber.Location = new System.Drawing.Point(292, 196);
+            this.richTextBox_oddOrEvenNumber.Location = new System.Drawing.Point(292, 214);
             this.richTextBox_oddOrEvenNumber.Name = "richTextBox_oddOrEvenNumber";
             this.richTextBox_oddOrEvenNumber.Size = new System.Drawing.Size(96, 72);
             this.richTextBox_oddOrEvenNumber.TabIndex = 5;
@@ -219,11 +225,70 @@
             this.tbx_fahrenheit.TabIndex = 18;
             this.tbx_fahrenheit.TextChanged += new System.EventHandler(this.tbx_fahrenheit_TextChanged);
             // 
+            // lbl_w
+            // 
+            this.lbl_w.AutoSize = true;
+            this.lbl_w.Location = new System.Drawing.Point(61, 644);
+            this.lbl_w.Name = "lbl_w";
+            this.lbl_w.Size = new System.Drawing.Size(74, 15);
+            this.lbl_w.TabIndex = 19;
+            this.lbl_w.Text = "Weight in kg";
+            // 
+            // lbl_h
+            // 
+            this.lbl_h.AutoSize = true;
+            this.lbl_h.Location = new System.Drawing.Point(61, 703);
+            this.lbl_h.Name = "lbl_h";
+            this.lbl_h.Size = new System.Drawing.Size(76, 15);
+            this.lbl_h.TabIndex = 20;
+            this.lbl_h.Text = "Height in cm";
+            // 
+            // btn_kmi
+            // 
+            this.btn_kmi.Location = new System.Drawing.Point(292, 644);
+            this.btn_kmi.Name = "btn_kmi";
+            this.btn_kmi.Size = new System.Drawing.Size(96, 53);
+            this.btn_kmi.TabIndex = 21;
+            this.btn_kmi.Text = "Calculate KMI";
+            this.btn_kmi.UseVisualStyleBackColor = true;
+            this.btn_kmi.Click += new System.EventHandler(this.btn_kmi_Click);
+            // 
+            // rch_kmi
+            // 
+            this.rch_kmi.Location = new System.Drawing.Point(494, 644);
+            this.rch_kmi.Name = "rch_kmi";
+            this.rch_kmi.Size = new System.Drawing.Size(162, 72);
+            this.rch_kmi.TabIndex = 22;
+            this.rch_kmi.Text = "";
+            this.rch_kmi.TextChanged += new System.EventHandler(this.rch_kmi_TextChanged);
+            // 
+            // tbx_weight
+            // 
+            this.tbx_weight.Location = new System.Drawing.Point(158, 644);
+            this.tbx_weight.Name = "tbx_weight";
+            this.tbx_weight.Size = new System.Drawing.Size(96, 23);
+            this.tbx_weight.TabIndex = 23;
+            this.tbx_weight.TextChanged += new System.EventHandler(this.tbx_weight_TextChanged);
+            // 
+            // tbx_height
+            // 
+            this.tbx_height.Location = new System.Drawing.Point(158, 703);
+            this.tbx_height.Name = "tbx_height";
+            this.tbx_height.Size = new System.Drawing.Size(96, 23);
+            this.tbx_height.TabIndex = 24;
+            this.tbx_height.TextChanged += new System.EventHandler(this.tbx_height_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(807, 755);
+            this.ClientSize = new System.Drawing.Size(807, 931);
+            this.Controls.Add(this.tbx_height);
+            this.Controls.Add(this.tbx_weight);
+            this.Controls.Add(this.rch_kmi);
+            this.Controls.Add(this.btn_kmi);
+            this.Controls.Add(this.lbl_h);
+            this.Controls.Add(this.lbl_w);
             this.Controls.Add(this.tbx_fahrenheit);
             this.Controls.Add(this.tbx_celcius);
             this.Controls.Add(this.btn_celciusToFarenheit);
@@ -271,5 +336,11 @@
         private System.Windows.Forms.Button btn_celciusToFarenheit;
         private System.Windows.Forms.TextBox tbx_celcius;
         private System.Windows.Forms.TextBox tbx_fahrenheit;
+        private System.Windows.Forms.Label lbl_w;
+        private System.Windows.Forms.Label lbl_h;
+        private System.Windows.Forms.Button btn_kmi;
+        private System.Windows.Forms.RichTextBox rch_kmi;
+        private System.Windows.Forms.TextBox tbx_weight;
+        private System.Windows.Forms.TextBox tbx_height;
     }
 }
